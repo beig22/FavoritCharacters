@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/characterListFragment">
+    <fragment
+        android:id="@+id/characterListFragment"
+        android:name="com.example.recyclview.fragments.CharacterListFragment"
+        android:label="fragment_character_list"
+        tools:layout="@layout/fragment_character_list" >
+        <action
+            android:id="@+id/action_characterListFragment_to_characterDescriptionFragment"
+            app:destination="@id/characterDescriptionFragment" />
+        <argument
+            android:name="CharacterId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterDescriptionFragment"
+        android:name="com.example.recyclview.fragments.CharacterDescriptionFragment"
+        android:label="fragment_character_description"
+        tools:layout="@layout/fragment_character_description" />
+</navigation>
